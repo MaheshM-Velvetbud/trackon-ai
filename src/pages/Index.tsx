@@ -79,64 +79,64 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-6 bg-gradient-to-r from-primary/10 to-accent/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
-              <Sparkles className="w-4 h-4 mr-2" />
-              Next-Generation AI Security Platform
-            </Badge>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                Smarter Security.
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent">
-                Sharper Insights.
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
-                Stronger Protection.
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
-              TrackOn is an AI-powered security and surveillance platform designed to detect, analyze, 
-              and prevent threats before they happen. Whether for government, retail, airports, or enterprises, 
-              TrackOn ensures safety with intelligence.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group" 
-                style={{ boxShadow: 'var(--glow-primary)' }}
-              >
-                Request a Demo
-                <Play className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-2 border-primary/30 text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-accent/5 px-8 py-6 text-lg group"
-              >
-                Explore Features
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-              </Button>
-            </div>
+      <div className="text-center mb-16">
+  <Badge variant="outline" className="mb-6 bg-gradient-to-r from-primary/10 to-gray-500/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
+    <Sparkles className="w-4 h-4 mr-2" />
+    Next-Generation AI Security Platform
+  </Badge>
+  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+    <span className="bg-gradient-to-r from-black via-secondary to-gray-500 bg-clip-text text-transparent">
+      Smarter Security.
+    </span>
+    <br />
+    <span className="bg-gradient-to-r from-gray-700 via-primary to-secondary bg-clip-text text-transparent">
+      Sharper Insights.
+    </span>
+    <br />
+    <span className="bg-gradient-to-r from-secondary via-gray-800 to-primary bg-clip-text text-transparent">
+      Stronger Protection.
+    </span>
+  </h1>
+  <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
+    TrackOn is an AI-powered security and surveillance platform designed to detect, analyze, 
+    and prevent threats before they happen. Whether for government, retail, airports, or enterprises, 
+    TrackOn ensures safety with intelligence.
+  </p>
+  
+  <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+    <Button 
+      size="lg" 
+      className="bg-gradient-to-r from-primary to-gray-500 hover:from-primary/90 hover:to-gray-500/90 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group" 
+      style={{ boxShadow: 'var(--glow-primary)' }}
+    >
+      Request a Demo
+      <Play className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+    </Button>
+    <Button 
+      variant="outline" 
+      size="lg" 
+      className="border-2 border-primary/30 text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-gray-500/5 px-8 py-6 text-lg group"
+    >
+      Explore Features
+      <ArrowRight className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+    </Button>
+  </div>
 
-            <div className="flex items-center justify-center gap-8 mb-12">
-              <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">95%+</div>
-                <div className="text-sm text-muted-foreground">Accuracy Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">24/7</div>
-                <div className="text-sm text-muted-foreground">Monitoring</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">10K+</div>
-                <div className="text-sm text-muted-foreground">Camera Support</div>
-              </div>
-            </div>
-          </div>
+  <div className="flex items-center justify-center gap-8 mb-12">
+    <div className="text-center">
+      <div className="text-3xl font-bold bg-gradient-to-r from-primary to-gray-800 bg-clip-text text-transparent">95%+</div>
+      <div className="text-sm text-muted-foreground">Accuracy Rate</div>
+    </div>
+    <div className="text-center">
+      <div className="text-3xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">24/7</div>
+      <div className="text-sm text-muted-foreground">Monitoring</div>
+    </div>
+    <div className="text-center">
+      <div className="text-3xl font-bold bg-gradient-to-r from-gray-800 to-secondary bg-clip-text text-transparent">10K+</div>
+      <div className="text-sm text-muted-foreground">Camera Support</div>
+    </div>
+  </div>
+</div>
           
           {/* Hero Image */}
           <div className="relative max-w-6xl mx-auto">
