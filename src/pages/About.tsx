@@ -49,6 +49,8 @@ const About = () => {
   ];
 
   return (
+    <>
+   
     <div className="min-h-screen bg-background">
       <Navigation />
       
@@ -245,6 +247,7 @@ const About = () => {
         </div>
       </footer>
     </div>
+    </>
   );
 };
 
