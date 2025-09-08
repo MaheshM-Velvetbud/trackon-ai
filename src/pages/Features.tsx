@@ -346,19 +346,19 @@ const Features = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border">
+     <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <div className="flex items-center justify-center space-x-2">
-              <Shield className="h-6 w-6 text-primary" />
-              <span className="text-lg font-bold gradient-text">TrackOn</span>
+              <img src="/trackonailogo.png" alt="TrackOn Logo" className="h-32 w-32" />
+              {/* <span className="text-lg font-bold gradient-text">TrackOn</span> */}
             </div>
             <p className="text-sm text-muted-foreground">
               © 2024 TrackOn AI Security. All rights reserved.
             </p>
           </div>
         </div>
-      </footer>
+</footer>
     </div>
   );
 };

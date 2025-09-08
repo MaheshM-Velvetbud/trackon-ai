@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Shield, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,17 +20,14 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="relative">
-              <Shield className="h-8 w-8 text-primary group-hover:text-accent transition-colors" />
-              <Zap className="absolute -top-1 -right-1 h-4 w-4 text-accent" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold gradient-text">TrackOn</span>
-              <span className="text-xs text-muted-foreground font-mono">AI Security</span>
-            </div>
+            <img 
+              src="/trackonailogo.png" 
+              alt="TrackOn AI Logo" 
+              className="h-20 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -56,7 +53,7 @@ const Navigation = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-              Request Demo
+              <a href='/contact'>Request Demo</a>
             </Button>
             <Button 
               size="sm" 

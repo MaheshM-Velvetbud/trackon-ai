@@ -1,5 +1,7 @@
 "use client";
 
+import { Shield } from 'lucide-react';
+
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from "@/components/Navigation"
@@ -84,8 +86,21 @@ function App() {
           </div>
         ))}
       </div>
+      
     </div>
-    {/* <Footer/> */}
+   <footer className="py-8 border-t border-border">
+        <div className="container mx-auto px-4">
+          <div className="text-center space-y-4">
+            <div className="flex items-center justify-center space-x-2">
+              <img src="/trackonailogo.png" alt="TrackOn Logo" className="h-32 w-32" />
+              {/* <span className="text-lg font-bold gradient-text">TrackOn</span> */}
+            </div>
+            <p className="text-sm text-muted-foreground">
+              © 2024 TrackOn AI Security. All rights reserved.
+            </p>
+          </div>
+        </div>
+</footer>
     </>
   );
 }

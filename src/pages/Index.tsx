@@ -2,7 +2,8 @@ import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import heroImage from '@/assets/ai-security-hero.jpg';
+// import heroImage from '@/assets/ai-security-hero.jpg';
+
 import { 
   Eye, 
   Brain, 
@@ -108,8 +109,8 @@ const Index = () => {
       size="lg" 
       className="bg-gradient-to-r from-primary to-gray-500 hover:from-primary/90 hover:to-gray-500/90 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group" 
       style={{ boxShadow: 'var(--glow-primary)' }}
-    >
-      Request a Demo
+    ><a href='/contact'> Request a Demo</a>
+     
       <Play className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
     </Button>
     <Button 
@@ -117,7 +118,9 @@ const Index = () => {
       size="lg" 
       className="border-2 border-primary/30 text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-gray-500/5 px-8 py-6 text-lg group"
     >
-      Explore Features
+     
+      <a href='/features'>  Explore Features</a>
+     
       <ArrowRight className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
     </Button>
   </div>
@@ -142,7 +145,7 @@ const Index = () => {
           <div className="relative max-w-6xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/15 to-accent/20 rounded-3xl blur-3xl transform -rotate-1"></div>
             <img 
-              src={heroImage} 
+              src="/tech.jpg" 
               alt="TrackOn AI Security Platform Dashboard" 
               className="relative w-full h-auto rounded-3xl shadow-2xl border border-border/20 hover:scale-[1.02] transition-transform duration-500" 
               style={{ boxShadow: 'var(--shadow-elegant)' }}
@@ -274,12 +277,13 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-accent hover:from-primary-glow hover:to-accent cyber-glow"
-              >
-                Contact Us
+              ><a href='/contact'> Contact Us</a>
+               
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button variant="outline" size="lg" className="border-primary/30 hover:border-primary">
-                Request a Demo
+              <a href='/products'> Products</a>
+               
                 <Play className="w-4 h-4 ml-2" />
               </Button>
             </div>
@@ -288,19 +292,19 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border">
+     <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <div className="flex items-center justify-center space-x-2">
-              <Shield className="h-6 w-6 text-primary" />
-              <span className="text-lg font-bold gradient-text">TrackOn</span>
+              <img src="/trackonailogo.png" alt="TrackOn Logo" className="h-32 w-32" />
+              {/* <span className="text-lg font-bold gradient-text">TrackOn</span> */}
             </div>
             <p className="text-sm text-muted-foreground">
               © 2024 TrackOn AI Security. All rights reserved.
             </p>
           </div>
         </div>
-      </footer>
+</footer>
     </div>
   );
 };

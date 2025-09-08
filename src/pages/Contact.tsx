@@ -17,8 +17,11 @@ import {
   CheckCircle2,
   Building2,
   Users,
-  HelpCircle
+  HelpCircle,
+  ExternalLink
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import WorldMap from '@/components/Worldmap';
 
 const Contact = () => {
   const contactInfo = [
@@ -67,6 +70,19 @@ const Contact = () => {
     }
   ];
 
+  const policyLinks = [
+    {
+      title: 'TrackOn Data Protection & Privacy Policy',
+      description: 'Learn about our comprehensive data protection measures and global compliance standards',
+      link: '/privacy'
+    },
+    {
+      title: 'SINA Children\'s Privacy Policy',
+      description: 'Our commitment to protecting children\'s data in educational assessments',
+      link: '/sina-privacy'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -111,6 +127,13 @@ const Contact = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* World Map */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <WorldMap />
         </div>
       </section>
 
@@ -297,38 +320,63 @@ const Contact = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {faqs.map((faq, index) => (
-              <Card key={index} className="bg-card/70 hover:bg-card transition-all">
-                <CardContent className="p-6 space-y-3">
-                  <div className="flex items-start gap-3">
-                    <HelpCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <div className="space-y-2">
-                      <h3 className="font-semibold">{faq.question}</h3>
-                      <p className="text-sm text-muted-foreground">{faq.answer}</p>
+          <div className="space-y-8">
+            {/* FAQ Items */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {faqs.map((faq, index) => (
+                <Card key={index} className="bg-card/70 hover:bg-card transition-all">
+                  <CardContent className="p-6 space-y-3">
+                    <div className="flex items-start gap-3">
+                      <HelpCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div className="space-y-2">
+                        <h3 className="font-semibold">{faq.question}</h3>
+                        <p className="text-sm text-muted-foreground">{faq.answer}</p>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Privacy Policy Links */}
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-center mb-6">Privacy & Data Protection</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {policyLinks.map((policy, index) => (
+                  <Link key={index} to={policy.link}>
+                    <Card className="bg-gradient-to-br from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 transition-all border-primary/20 hover:border-primary/40 group">
+                      <CardContent className="p-6 space-y-3">
+                        <div className="flex items-start justify-between">
+                          <div className="space-y-2 flex-1">
+                            <h4 className="font-semibold group-hover:text-primary transition-colors">{policy.title}</h4>
+                            <p className="text-sm text-muted-foreground">{policy.description}</p>
+                          </div>
+                          <ExternalLink className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity ml-2 flex-shrink-0" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border">
+     <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <div className="flex items-center justify-center space-x-2">
-              <Shield className="h-6 w-6 text-primary" />
-              <span className="text-lg font-bold gradient-text">TrackOn</span>
+              <img src="/trackonailogo.png" alt="TrackOn Logo" className="h-32 w-32" />
+              {/* <span className="text-lg font-bold gradient-text">TrackOn</span> */}
             </div>
             <p className="text-sm text-muted-foreground">
               © 2024 TrackOn AI Security. All rights reserved.
             </p>
           </div>
         </div>
-      </footer>
+</footer>
     </div>
   );
 };
