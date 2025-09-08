@@ -67,10 +67,10 @@ const WorldMap = () => {
         </p>
       </div>
 
-      <div className="relative bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 overflow-hidden">
+      <div className="relative  rounded-2xl p-8 overflow-hidden">
         <div className="relative">
           <img 
-            src="/map.png"
+            src="/map3.png"
             alt="World Map showing TrackOn AI office locations" 
             className="w-full h-auto rounded-lg"
           />
@@ -86,7 +86,7 @@ const WorldMap = () => {
               }}
             >
               <div className={`relative ${getMarkerColor(office.type)}`}>
-                <MapPin className="w-6 h-6 drop-shadow-lg animate-bounce" />
+                <MapPin className="w-8 h-8 drop-shadow-lg animate-bounce" />
                 <div className="absolute w-3 h-3 bg-current rounded-full top-1 left-1.5 animate-pulse" />
               </div>
               

@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import SinaPrivacy from "./pages/SinaPrivacy";
 import NotFound from "./pages/NotFound";
+import ProductDetails from "./pages/ProductDetail"
 
 const queryClient = new QueryClient();
 
@@ -25,10 +26,11 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/features" element={<Features />} />
           <Route path="/products" element={<Products />} />
+           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/sina-privacy" element={<SinaPrivacy />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+         
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

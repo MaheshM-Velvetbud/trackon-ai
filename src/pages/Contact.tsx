@@ -84,58 +84,20 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-12">
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-8 max-w-4xl mx-auto">
-            <Badge variant="outline" className="border-primary/50 text-primary">
-              <Sparkles className="w-3 h-3 mr-1" />
-              Get In Touch
-            </Badge>
-            
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Contact <span className="gradient-text">Our Team</span>
-            </h1>
-            
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ready to transform your security infrastructure? Our experts are here to help you implement 
-              TrackOn's AI-powered surveillance solutions tailored to your specific needs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {contactInfo.map((info, index) => (
-              <Card key={index} className="text-center bg-card/70 hover:bg-card transition-all hover:shadow-lg group">
-                <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
-                    <info.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="space-y-1">
-                    <h3 className="font-semibold">{info.title}</h3>
-                    <p className="text-foreground">{info.content}</p>
-                    <p className="text-xs text-muted-foreground">{info.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* World Map */}
+        {/* World Map */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <WorldMap />
         </div>
       </section>
+      
+     
+
+     
+
+    
 
       {/* Contact Form & Info */}
       <section className="py-16">
@@ -359,6 +321,47 @@ const Contact = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+       {/* Hero Section */}
+      <section className="pt-24 pb-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center space-y-8 max-w-4xl mx-auto">
+            <Badge variant="outline" className="border-primary/50 text-primary">
+              <Sparkles className="w-3 h-3 mr-1" />
+              Get In Touch
+            </Badge>
+            
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              Contact <span className="gradient-text">Our Team</span>
+            </h1>
+            
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Ready to transform your security infrastructure? Our experts are here to help you implement 
+              TrackOn's AI-powered surveillance solutions tailored to your specific needs.
+            </p>
+          </div>
+        </div>
+      </section>
+       {/* Contact Information */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {contactInfo.map((info, index) => (
+              <Card key={index} className="text-center bg-card/70 hover:bg-card transition-all hover:shadow-lg group">
+                <CardContent className="p-6 space-y-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
+                    <info.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="font-semibold">{info.title}</h3>
+                    <p className="text-foreground">{info.content}</p>
+                    <p className="text-xs text-muted-foreground">{info.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
