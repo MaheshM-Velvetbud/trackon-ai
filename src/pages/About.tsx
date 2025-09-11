@@ -29,7 +29,7 @@ const About = () => {
     },
     {
       icon: Target,
-      title: 'Behavioral Analytics',
+      title: 'Emotion & suspicious detection',
       description: 'Identifies unusual activities such as loitering, sudden movements, or unauthorized access before incidents escalate.'
     },
     {

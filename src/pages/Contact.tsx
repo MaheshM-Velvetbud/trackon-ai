@@ -40,7 +40,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Headquarters',
-      content: 'Dubai, UAE',
+      content: 'Finland',
       description: 'SIRA Compliant Operations'
     },
     {

@@ -7,6 +7,7 @@ interface Office {
   country: string;
   position: { x: string; y: string }; // Position on the map image (percentage)
   type: 'headquarters' | 'office';
+  url: string; // URL for redirection
 }
 
 const WorldMap = () => {
@@ -16,30 +17,33 @@ const WorldMap = () => {
       city: 'Helsinki',
       country: 'Finland', 
       position: { x: '54%', y: '25%' },
-      type: 'headquarters'
+      type: 'headquarters',
+      url: 'https://armorfi.com/' // Placeholder URL for Finland, replace with actual link
     },
     {
       id: '2',
       city: 'Dubai',
       country: 'UAE',
       position: { x: '62%', y: '45%' },
-      type: 'office'
+      type: 'office',
+      url: 'https://armorae.com/'
     },
     {
       id: '3',
       city: 'Kuwait City',
       country: 'Kuwait',
       position: { x: '60%', y: '42%' },
-      type: 'office'
+      type: 'office',
+      url: 'https://armorkw.com/' // Placeholder URL for Kuwait, replace with actual link
     }
   ];
 
   const getMarkerColor = (type: Office['type']) => {
     switch (type) {
       case 'headquarters':
-        return 'text-primary';
+        return 'text-red-500'; // Gold color for headquarters
       case 'office':
-        return 'text-accent';
+        return 'text-yellow-300';
       default:
         return 'text-muted-foreground';
     }
@@ -56,21 +60,25 @@ const WorldMap = () => {
     }
   };
 
+  const handleMarkerClick = (url: string) => {
+    window.location.href = url;
+  };
+
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
         <h2 className="text-3xl md:text-4xl font-bold">
-          Global <span className="gradient-text">Presence</span>
+          Our Global <span className="gradient-text">Reach</span>
         </h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          TrackOn AI operates worldwide with offices, partners, and deployments across continents
+          TrackOn AI is headquartered in Helsinki, Finland, with a strong global presence through offices and partners across multiple continents
         </p>
       </div>
 
-      <div className="relative  rounded-2xl p-8 overflow-hidden">
+      <div className="relative rounded-2xl p-8 overflow-hidden">
         <div className="relative">
           <img 
-            src="/map3.png"
+            src="/map5.png"
             alt="World Map showing TrackOn AI office locations" 
             className="w-full h-auto rounded-lg"
           />
@@ -84,9 +92,10 @@ const WorldMap = () => {
                 left: office.position.x,
                 top: office.position.y,
               }}
+              onClick={() => handleMarkerClick(office.url)}
             >
               <div className={`relative ${getMarkerColor(office.type)}`}>
-                <MapPin className="w-8 h-8 drop-shadow-lg animate-bounce" />
+                <MapPin className="w-12 h-8 drop-shadow-lg animate-bounce" />
                 <div className="absolute w-3 h-3 bg-current rounded-full top-1 left-1.5 animate-pulse" />
               </div>
               
@@ -106,7 +115,7 @@ const WorldMap = () => {
         {/* Legend */}
         <div className="mt-8 flex flex-wrap justify-center gap-6">
           <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-primary" />
+            <MapPin className="w-4 h-4 text-yellow-500" />
             <span className="text-sm">Headquarters</span>
           </div>
           <div className="flex items-center gap-2">
@@ -121,7 +130,11 @@ const WorldMap = () => {
         {offices.map((office) => (
           <div
             key={office.id}
-            className="bg-card/70 rounded-lg p-4 space-y-2 hover:bg-card transition-all"
+            className={`rounded-lg p-4 space-y-2 transition-all ${
+              office.type === 'headquarters'
+                ? 'bg-yellow-50 border-2 border-yellow-500'
+                : 'bg-card/70 hover:bg-card'
+            }`}
           >
             <div className="flex items-center justify-between">
               <div>
